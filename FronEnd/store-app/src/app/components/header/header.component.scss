@@ -1,0 +1,49 @@
+
+.header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.nav a, .nav button {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+.nav a:hover, .nav button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.cart {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

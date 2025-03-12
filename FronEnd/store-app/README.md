@@ -1,0 +1,1 @@
+Se dbe intalar node js y despues hacer npm install  y para correr npm start

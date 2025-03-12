@@ -1,0 +1,1 @@
+Se debe tener net core 8  y se debe ejecutar el script de crear la base que se encuentra en  Store.Data/Scripts  con este se crea la base de datos pero solo es el template despues en el appsetings se debe agrar la conexion de base de datos donde se ejecuto el script y ya solo corre el proyecto y se reliza la micgracion y de datos tambien.

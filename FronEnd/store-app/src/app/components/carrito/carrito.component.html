@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>🛒 Mi Carrito</h2>
+  
+    <div *ngIf="mensajeError" class="error">{{ mensajeError }}</div>
+  
+    <div *ngIf="carrito.length > 0; else noData">
+      <div class="carrito-list">
+        <div class="carrito-item" *ngFor="let item of carrito">
+          <img 
+            [src]="item.imagenBase64 ? 'data:image/png;base64,' + item.imagenBase64 : imagenDefaultBase64" 
+            alt="Imagen del artículo" 
+            class="carrito-img"
+            (error)="onImageError($event)">
+  
+          <div class="carrito-info">
+            <h3>{{ item.nombreArticulo }}</h3>
+            <p><strong>Precio:</strong> {{ item.precio | number:'1.2-2' }}</p>
+            <p><strong>Cantidad:</strong> {{ item.cantidad }}</p>
+          </div>
+  
+          <div class="carrito-actions">
+            <button (click)="quitarArticulo(item.articuloId)">➖</button>
+            <button (click)="agregarArticulo(item.articuloId)">➕</button>
+            <button (click)="eliminarArticulo(item.articuloId)">🗑</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <ng-template #noData>
+      <p class="no-data">Tu carrito está vacío.</p>
+    </ng-template>
+  </div>
+  

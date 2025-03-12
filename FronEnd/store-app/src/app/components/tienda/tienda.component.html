@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="title">Tienda de Artículos</h2>
+  
+    <div *ngIf="articulos && articulos.length > 0; else noData">
+      <div class="articulos">
+        <div class="articulo" *ngFor="let articulo of articulos">          
+          
+          <img 
+            [src]="articulo.imagenBase64 ? 'data:image/png;base64,' + articulo.imagenBase64 : imagenDefaultBase64" 
+            alt="Imagen del artículo" 
+            class="articulo-img" 
+            (error)="onImageError($event)">
+  
+          <div class="articulo-info">
+            <h3>{{ articulo.descripcion }}</h3>
+            <p><strong>Stock:</strong> {{ articulo.stock }}</p>
+            <br>
+            <button *ngIf="isLoggedIn" class="btn btn-primary" (click)="agregarAlCarrito(articulo.articuloId)">
+                🛒 Agregar al carrito
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <ng-template #noData>
+      <p class="no-data">No hay artículos disponibles en este momento.</p>
+    </ng-template>
+  </div>
+  

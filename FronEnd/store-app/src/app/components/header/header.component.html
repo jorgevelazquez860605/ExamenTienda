@@ -1,0 +1,13 @@
+<header class="header">
+    <h1 class="logo">🛍️ Tienda Examen</h1>
+
+    <nav class="nav">
+        <a (click)="goTo('/tiendas')">🏪 Tienda</a>
+        <a (click)="goTo('/login')" *ngIf="!isLoggedIn">🔑 Iniciar Sesión</a>
+        <a (click)="goTo('/registro')" *ngIf="!isLoggedIn">🆕 Crear Usuario</a>
+        <a (click)="goTo('/carrito')" *ngIf="isLoggedIn">🛒 Carrito</a>
+
+        <button *ngIf="isLoggedIn" (click)="logout()">🚪 Cerrar Sesión</button>
+
+    </nav>
+</header>

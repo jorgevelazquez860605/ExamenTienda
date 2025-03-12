@@ -1,0 +1,60 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .carrito-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+  
+  .carrito-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .carrito-info {
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .carrito-actions button {
+    background: #6a11cb;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 0 5px;
+  }
+  
+  .carrito-actions button:hover {
+    background: #2575fc;
+  }
+  
+  .no-data {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000;
+  }
+  
