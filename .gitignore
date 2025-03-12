@@ -1,0 +1,20 @@
+# 🔹 Archivos y carpetas de Visual Studio
+.vs/
+
+
+# 🔹 Archivos y carpetas de compilación de .NET
+bin/
+obj/
+
+
+# 🔹 Configuraciones de entorno (Evita subir credenciales)
+.env
+*.env.local
+*.env.development
+*.env.production
+
+# 🔹 Dependencias de Node.js
+node_modules/
+
+
+
